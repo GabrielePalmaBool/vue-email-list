@@ -7,19 +7,10 @@
 
 
 h2 {
-    display: inline-block;;
-}
-
-.fa-solid {
-    position: absolute;
-    right: 1%;
-    margin-top: 5px;
+    display: inline-block;
 }
 
 
-h4{
-    text-align: center;
-}
 
 /* STILI MAIN */
 
@@ -40,45 +31,4 @@ li{
     background-color: lightblue;
 }
 
-.ContainerInput{
-    margin-top: 50px;
-    text-align: center;
-    padding: 20px;
-}
 
-a{
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 5px 15px 5px 15px;
-    border-radius: 15px;
-    background-color: lightgray;
-    border: 2px solid grey;
-    margin-left: 20px;
-}
-
- a:hover{
-    color: white;
-}
-
-
-input[type=text], select {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-
-.complete{
-    text-decoration: line-through;
-    color: green;
-}
-
-.tocomplete{
-    color: red;
-}
