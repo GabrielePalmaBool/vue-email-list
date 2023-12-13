@@ -1,0 +1,1 @@
+Primo esercizio sull'uso della libreria axion per richiamare dati(emails) da un server esterno

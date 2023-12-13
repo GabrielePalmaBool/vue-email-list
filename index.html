@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <!-- Link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- richiamo VueJS 3.2 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+
+    <!-- Link css style-->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Vue-email-list-Ex4</title>
+
+</head>
+<body>
+
+    <div id="app">
+
+        <div class="container">
+
+            <div class="ContainerInput">
+                <input type="text" placeholder="Inserire mansione" v-model = "message" @keyup.enter="addTask()"><a href="#" @click = "addTask()">inserisci</a>
+            </div>
+            <h4 v-if ="error" style="color: red;">inseire una mansione di almeno 5 caratteri</h4>
+
+
+            
+            <ul v-if ="tasks.length > 0" >
+                <li v-for="(task,i) in tasks" :key="i">
+                    <h2 :class="task.done ? 'complete' : 'tocomplete'" @click = "task.done = !task.done">{{task.text}}</h2>
+                    <i class="fa-solid fa-xmark" @click = "delTask(i)"></i>
+                </li>
+            </ul>
+            <h2 v-else> Non ci sono tasks</h2>
+        </div>
+    </div>
+
+
+
+     <!-- Link mio file Js-->
+    <script src="Javascript/Jv.js"></script>
+    
+</body>
+</html>
