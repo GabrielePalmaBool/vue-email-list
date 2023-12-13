@@ -29,14 +29,14 @@
         <div class="container">
 
             <h2>E-MAILS</h2>
-            <ul v-if ="mail" >
+            <ul v-if ="Arraymails.length==10" >
                 <li v-for="mail in Arraymails">
                     <h3>{{mail}}</h3>
     
                 </li>
             </ul>
 
-            <h2 v-else> Non ci sono mail</h2>
+            <h2 v-else> In caricamento....</h2>
         </div>
     </div>
 

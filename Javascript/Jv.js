@@ -44,7 +44,7 @@ createApp({
 
                console.log(risposta.data.response);
 
-               this.Arraymails[i] = risposta.data.response;
+               this.Arraymails.push(risposta.data.response);
 
                console.log(this.Arraymails);
             });
