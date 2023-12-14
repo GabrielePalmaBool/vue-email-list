@@ -20,7 +20,7 @@ createApp({
 
         return {
 
-            mail: 0,
+            complete: false,
 
             Arraymails : []
    
@@ -34,9 +34,7 @@ createApp({
     mounted() {
 
       for(let i = 0; i < 10;i++){
-
-         this.mail = 0;
-
+ 
          //chiamata tramite libreria axios all'Api ()
          axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
 
@@ -47,11 +45,15 @@ createApp({
                this.Arraymails.push(risposta.data.response);
 
                console.log(this.Arraymails);
+
+               if(i== 9){
+                    this.complete = true;
+               }
+
             });
 
       }
-
-      this.mail = 10;
+;
   }
 
 }).mount('#app');
